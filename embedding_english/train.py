@@ -78,7 +78,7 @@ def _main(params):
         params) if params.load_model == '' else tf.keras.models.load_model(
             params.load_model)
 
-    opt = tf.keras.optimizers.Adam(learning_rate=params.learning_rate)
+    opt = tf.keras.optimizers.legacy.Adam(learning_rate=params.learning_rate)
     model.compile(optimizer=opt, loss='mean_squared_error') # loss is MSE
 
     if os.path.isdir(params.checkpoint_path):

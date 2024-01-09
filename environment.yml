@@ -3,10 +3,10 @@ channels:
   - anaconda
   - defaults
 dependencies:
-  - python=3.7
+  - python=3.11
   - make
   - pip
   - pip:
-    - -r file:req1.txt
-    - -r file:req2.txt
-    - -r file:req3.txt
+    - -r req1.txt
+    - -r req2.txt
+    - -r req3.txt
